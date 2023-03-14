@@ -21,15 +21,13 @@ body {
     }
 
     100% {
-            {
-            box-shadow: 0px 3px 3px 1px rgba(64,
-                    75,
-                    191, 0.14), 0px 3px 3px 1px rgba(64,
-                    75,
-                    191, 0.12), 0px 3px 3px 1px rgba(64,
-                    75,
-                    191, 0.2);
-        }
+        box-shadow: 0px 3px 3px 1px rgba(64,
+                75,
+                191, 0.14), 0px 3px 3px 1px rgba(64,
+                75,
+                191, 0.12), 0px 3px 3px 1px rgba(64,
+                75,
+                191, 0.2);
     }
 }
 
@@ -56,7 +54,7 @@ p {
 
 :root {
     --color-text: #434455;
-    --color-main: rgb(77, 90, 229);
+    --color-main: #4d5ae5;
     --color-hover: rgb(64, 75, 191);
     --color-text-accent: #2E2F42;
     --color-text-unaccent: #F4F4FD;
@@ -520,6 +518,8 @@ p {
     line-height: 1.5;
     letter-spacing: 0.02em;
 
+    border-width: 0px;
+
     transition: transform;
     transition-duration: 250ms;
     transition-timing-function: var(--transition-type);
@@ -560,7 +560,9 @@ p {
     margin-right: 120px;
 }
 
-
+.footer-social {
+    margin-right: 120px;
+}
 
 .footer-social-gap {
     gap: 16px
@@ -580,6 +582,77 @@ p {
 .footer-social-icon:focus {
     background-color: #31D0AA;
     outline: none;
+}
+
+.footer-subscribe {
+    display: flex;
+    gap: 24px;
+}
+
+.btn-subscribe {
+    padding: 8px 24px;
+    background-color: var(--color-main);
+    border-width: 0px;
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    font-weight: 500;
+    color: var(--color-alternative);
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: var(--transition-type);
+}
+
+.btn-subscribe:hover,
+.btn-subscribe:focus {
+    outline: none;
+    background-color: var(--color-hover);
+}
+
+
+
+.footer-input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    transition: color 250ms var(--transition-type);
+}
+
+.footer-input {
+    padding-left: 16px;
+    width: 264px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: transparent;
+    border-width: 0;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+
+    color: var(--color-alternative);
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+}
+
+.footer-input:focus,
+.footer-input:hover {
+    outline: none;
+    border: 1px solid var(--color-alternative);
+}
+
+.footer-input:focus::placeholder,
+.footer-input:hover::placeholder {
+    color: var(--color-alternative);
+}
+
+.btn-subscribe-pic {
+    fill: var(--color-alternative);
 }
 
 /* backdrop */
@@ -605,7 +678,7 @@ p {
 
 .backdrop.is-hidden .modal {
     transform: translate(-50%, -50%) scale(1.1);
-    visibility: none;
+    visibility: hidden;
 }
 
 .modal {
@@ -615,7 +688,7 @@ p {
     transform: translate(-50%, -50%);
 
     width: 408px;
-    height: 576px;
+    height: auto;
     border-radius: 4px;
     padding: 24px;
     background-color: var(--color-alternative);
@@ -626,10 +699,21 @@ p {
 
 
     animation: pulse;
-    animation-duration: 2s;
+    animation-duration: 6s;
     animation-iteration-count: infinite;
 }
 
+.modal-header {
+
+    font-size: 16px;
+    line-height: 1.5;
+
+    text-align: center;
+    letter-spacing: 0.02em;
+    margin-top: 24px;
+    margin-bottom: 16px;
+    color: var(--color-text-accent);
+}
 
 .close-btn {
     height: 24px;
@@ -642,10 +726,136 @@ p {
     align-items: center;
     cursor: pointer;
 
-
-    transition: background 250ms var(--transition-type);
-
 }
+
+
+
+.modal-input-item {
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.modal-input-label {
+    display: block;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: #8E8F99;
+    margin-bottom: 4px;
+}
+
+.modal-input {
+    display: block;
+    border-radius: 4px;
+    width: 360px;
+    height: 40px;
+    border: 1px solid rgba(46, 47, 66, 0.2);
+    padding-left: 38px;
+    transition: border-color 250ms var(--transition-type);
+}
+
+.modal-input-pic {
+    position: absolute;
+    bottom: 14px;
+    left: 19px;
+    transition: fill 250ms var(--transition-type);
+}
+
+.modal-input-textarea {
+    resize: none;
+    height: 120px;
+    padding: 8px 18px;
+    margin-bottom: 16px;
+}
+
+.modal-input-textarea::placeholder {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
+}
+
+.terms-acces {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+.modal-input-terms {
+    letter-spacing: 0.04em;
+    margin: 0;
+    margin-left: 24px;
+    position: relative;
+}
+
+
+.modal-input:hover,
+.modal-input:focus {
+    outline: none;
+    border: 1px solid var(--color-main);
+}
+
+.alt-checkbox {
+    position: absolute;
+    left: -23px;
+    bottom: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    background-color: var(--color-text-unaccent);
+    border: 1px solid #2E2F42;
+    border-radius: 2px;
+
+    transition: background-color 250ms var(--transition-type),
+        border-color 250ms var(--transition-type);
+}
+
+.modal-check-pic {
+    fill: var(--color-text-unaccent);
+}
+
+.modal-input-checkbox:checked+.alt-checkbox {
+    background-color: var(--color-main);
+    border-color: var(--color-main);
+}
+
+.modal-input:focus+.modal-input-pic,
+.modal-input:hover+.modal-input-pic {
+    fill: var(--color-main);
+}
+
+.btn-modal-send {
+    display: block;
+    height: auto;
+    width: 169px;
+    padding: 16px 32px;
+    background-color: var(--color-main);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: 0;
+    margin: 0 auto;
+    margin-top: 24px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: var(--color-alternative);
+    cursor: pointer;
+
+    transition: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: var(--transition-type);
+}
+
+.btn-modal-send:hover {
+
+    background-color: var(--color-hover);
+}
+
+
 
 .close-btn-pic {
     fill: #2E2F42;
@@ -658,6 +868,7 @@ p {
     background-color: var(--color-hover);
     border: none;
 }
+
 
 .close-btn:hover .close-btn-pic,
 .close-btn:focus .close-btn-pic {
