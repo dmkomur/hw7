@@ -550,7 +550,7 @@ p {
 }
 
 .footer-text {
-    max-width: 264px;
+    width: 264px;
     margin-top: 16px;
     color: #E7E9FC;
 
@@ -561,7 +561,7 @@ p {
 }
 
 .footer-social {
-    margin-right: 120px;
+    margin-right: 80px;
 }
 
 .footer-social-gap {
@@ -688,7 +688,7 @@ p {
     transform: translate(-50%, -50%);
 
     width: 408px;
-    height: auto;
+    height: 584px;
     border-radius: 4px;
     padding: 24px;
     background-color: var(--color-alternative);
@@ -705,13 +705,11 @@ p {
 
 .modal-header {
 
-    font-size: 16px;
     line-height: 1.5;
-
     text-align: center;
     letter-spacing: 0.02em;
-    margin-top: 24px;
     margin-bottom: 16px;
+    padding-top: 24px;
     color: var(--color-text-accent);
 }
 
@@ -725,6 +723,7 @@ p {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    transition: background-color 250ms var(--transition-type);
 
 }
 
@@ -738,7 +737,7 @@ p {
 .modal-input-label {
     display: block;
     font-size: 12px;
-    line-height: 14px;
+    line-height: 1.17;
     letter-spacing: 0.01em;
     color: #8E8F99;
     margin-bottom: 4px;
@@ -766,6 +765,10 @@ p {
     height: 120px;
     padding: 8px 18px;
     margin-bottom: 16px;
+}
+
+.privat-policy {
+    color: var(--color-main);
 }
 
 .modal-input-textarea::placeholder {
