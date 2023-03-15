@@ -1,0 +1,21 @@
+.hero-section {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url(../images/people-office.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    max-width: 1440px;
+    object-fit: contain;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 112px 0px;
+    text-align: center;
+}
+
+.hero-header {
+    margin: 0px auto 48px;
+    font-size: 56px;
+    line-height: 1.07;
+    letter-spacing: 0.02em;
+    color: var(--color-alternative);
+    max-width: 496px;
+}
